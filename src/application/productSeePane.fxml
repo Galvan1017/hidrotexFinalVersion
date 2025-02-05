@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProductSeeController">
+   <children>
+      <Text layoutX="156.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar: " wrappingWidth="91.73124999999993">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="filterField" layoutX="276.0" layoutY="51.0" prefHeight="34.0" prefWidth="422.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <TableView fx:id="tableview" layoutX="1.0" layoutY="101.0" prefHeight="516.0" prefWidth="979.0">
+        <columns>
+          <TableColumn fx:id="nombreDelProducto" prefWidth="183.46666264533997" text="Nombre del Producto" />
+          <TableColumn fx:id="type" minWidth="1.5999679565429688" prefWidth="141.3333282470703" text="Tipo" />
+            <TableColumn fx:id="color" prefWidth="90.13339233398438" text="Color" />
+            <TableColumn fx:id="price" prefWidth="114.13336181640625" text="Precio U" />
+            <TableColumn fx:id="kiloG" prefWidth="82.39996337890625" text="KG" />
+            <TableColumn fx:id="units" prefWidth="90.66668701171875" text="Unidades" />
+            <TableColumn fx:id="isActive" prefWidth="90.40008544921875" text="Active" />
+            <TableColumn fx:id="edit" prefWidth="72.26654052734375" text="Editar" />
+            <TableColumn fx:id="add" prefWidth="110.20001220703125" text="Agregar" />
+        </columns>
+      </TableView>
+      <Pane fx:id="extraPane" layoutX="13.0" layoutY="73.0" prefHeight="540.0" prefWidth="955.0" style="-fx-background-color: #ffffff;" visible="false" />
+      <Button fx:id="closeButton" layoutX="918.0" layoutY="73.0" mnemonicParsing="false" onAction="#close" text="Cerrar" visible="false" />
+      <Button fx:id="dwButton" layoutX="121.0" layoutY="646.0" mnemonicParsing="false" onAction="#generateCSVfile" prefHeight="48.0" prefWidth="149.0" text="Descargar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font></Button>
+      <Text fx:id="descargaMess" layoutX="299.0" layoutY="674.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.39996337890625" />
+   </children>
+</Pane>

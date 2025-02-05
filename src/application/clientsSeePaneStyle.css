@@ -1,0 +1,14 @@
+
+.table-view .cell {
+    -fx-text-fill: black; 
+}
+
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: black; 
+}
+.table-view .column-header-background .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ventaSeeController">
+   <children>
+      <Text layoutX="307.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Ventas " wrappingWidth="348.2701416015625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableview" layoutX="6.0" layoutY="186.0" prefHeight="434.0" prefWidth="963.0">
+        <columns>
+          <TableColumn fx:id="idVenta" prefWidth="75.0" text="Venta" />
+          <TableColumn fx:id="cliente" prefWidth="150.3999252319336" text="Cliente" />
+            <TableColumn fx:id="fecha" prefWidth="89.33332824707031" text="Fecha" />
+            <TableColumn fx:id="sucursal" prefWidth="106.66665649414062" text="Sucursal" />
+            <TableColumn fx:id="vendedor" prefWidth="222.13327026367188" text="Vendedor" />
+            <TableColumn fx:id="cantidad" prefWidth="80.2667236328125" text="Cantidad" />
+            <TableColumn fx:id="lote" prefWidth="109.59991455078125" text="Lote" />
+            <TableColumn fx:id="ver" minWidth="0.0" prefWidth="61.06683349609375" text="Ver" />
+            <TableColumn fx:id="eliminar" prefWidth="68.53338623046875" text="Eliminar" />
+        </columns>
+      </TableView>
+      <Text layoutX="133.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar:" wrappingWidth="348.2701416015625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="filterField" layoutX="255.0" layoutY="92.0" prefHeight="34.0" prefWidth="393.0" />
+      <Pane fx:id="detailsPane" layoutX="50.0" layoutY="100.0" prefHeight="530.0" prefWidth="820.0" style="-fx-background-color: #ffff;" visible="false" />
+      <Button fx:id="closeButton" layoutX="820.0" layoutY="100.0" mnemonicParsing="false" onAction="#closeExtraPane" text="Cerrar" visible="false" />
+      <Button fx:id="dwButton" layoutX="75.0" layoutY="630.0" mnemonicParsing="false" onAction="#generateCSVfile" prefHeight="58.0" prefWidth="130.0" text="Descargar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Button>
+      <DatePicker fx:id="start" layoutX="220.0" layoutY="653.0" />
+      <Text layoutX="220.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descargar por rango de Fechas:" wrappingWidth="197.3367462158203">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font></Text>
+      <DatePicker fx:id="end" layoutX="412.0" layoutY="653.0" />
+      <Text layoutX="398.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" wrappingWidth="18.136734008789062">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font></Text>
+      <Text fx:id="descargaMess" layoutX="412.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.2701416015624">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font></Text>
+   </children>
+</Pane>

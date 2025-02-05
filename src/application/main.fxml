@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+  
+   <children>
+      <HBox fx:id="header" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fill="#f2eaea" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Hidrotex" textAlignment="CENTER" wrappingWidth="977.5001831054688">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="72.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="302.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <VBox fx:id="sideMenu" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="300.0" stylesheets="@style.css">
+         <children>
+            <Button fx:id="clientesButton" alignment="BASELINE_LEFT" onAction="#clientButtonPress" prefHeight="127.0" prefWidth="300.0" stylesheets="@style.css" text="Clientes " textFill="#faf2f2">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@teamworkF.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="productoButton" alignment="BASELINE_LEFT" onAction="#productButtonPress" prefHeight="127.0" prefWidth="300.0" styleClass="button" stylesheets="@style.css" text="Producto " textFill="#f4e9e9">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@ProductoIcon.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ventaButton" alignment="BASELINE_LEFT" onAction="#ventaButtonPress" prefHeight="127.0" prefWidth="300.0" text="Venta " textFill="#f4f1f1">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@ventaIcon.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="egresosButton" alignment="BASELINE_LEFT" onAction="#egresosButtonPress" prefHeight="127.0" prefWidth="300.0" text="Egresos " textFill="#fcfafa">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@egresosIcon.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="verButton" alignment="BASELINE_LEFT" onAction="#verButtonPress" prefHeight="127.0" prefWidth="300.0" text="Ver" textFill="#fcfafa">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@verIcon.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="generalPane" layoutX="298.0" layoutY="100.0" prefHeight="700.0" prefWidth="980.0" />
+      <Pane id="clientSubmenu" fx:id="clientSubmenu" layoutX="299.0" layoutY="134.0" prefHeight="205.0" prefWidth="198.0" style="-fx-background-color: #282828;" stylesheets="@style.css" visible="false">
+         <children>
+            <Button fx:id="clientesVerBT" focusTraversable="false" layoutY="58.0" mnemonicParsing="false" onAction="#clientsReadPane" prefHeight="43.0" prefWidth="198.0" stylesheets="@style.css" text="Ver" />
+            <Text fill="#f2eaea" layoutX="15.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes Submenu">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="99.0" layoutY="36.0" startX="-100.0" stroke="#f2eaea" strokeWidth="4.0" />
+            <Button fx:id="clientesAgregarBT" layoutY="122.0" mnemonicParsing="false" onAction="#clientsAddPane" text="Agregar" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane id="productSubmenu" fx:id="productSubmenu" layoutX="300.0" layoutY="248.0" prefHeight="205.0" prefWidth="198.0" stylesheets="@style.css" visible="false">
+         <children>
+            <Text fill="#f2eaea" layoutX="9.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto Submenu">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="99.0" layoutY="44.0" startX="-100.0" stroke="#f2eaea" strokeWidth="4.0" />
+            <Button fx:id="productoVerBT" focusTraversable="false" layoutY="56.0" mnemonicParsing="false" onAction="#productReadPane" prefHeight="43.0" prefWidth="198.0" stylesheets="@style.css" text="Ver" />
+            <Button fx:id="productoAgregarBT" focusTraversable="false" layoutY="116.0" mnemonicParsing="false" onAction="#productAddPane" prefHeight="43.0" prefWidth="198.0" stylesheets="@style.css" text="Agregar" />
+         </children>
+      </Pane>
+      <Pane id="ventaSubmenu" fx:id="saleSubmenu" layoutX="299.0" layoutY="400.0" prefHeight="205.0" prefWidth="198.0" stylesheets="@style.css" visible="false">
+         <children>
+            <Text fill="#f2eaea" layoutX="19.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Venta  Submenu">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="99.0" layoutY="44.0" startX="-100.0" stroke="#f2eaea" strokeWidth="4.0" />
+            <Button fx:id="ventaVerButton" focusTraversable="false" layoutY="53.0" mnemonicParsing="false" onAction="#ventaSeePane" prefHeight="43.0" prefWidth="198.0" stylesheets="@style.css" text="Ver" />
+            <Button fx:id="ventaAddButton" layoutX="1.0" layoutY="97.0" mnemonicParsing="false" onAction="#ventaAddPane" prefHeight="43.0" prefWidth="198.0" text="Agregar" />
+            <Button fx:id="cotizarButton" layoutX="1.0" layoutY="149.0" mnemonicParsing="false" onAction="#ventaCotizarPane" prefHeight="43.0" prefWidth="198.0" text="Cotizar" />
+         </children>
+      </Pane>
+      <Pane id="ventaSubmenu" fx:id="egresosSubMenu" layoutX="300.0" layoutY="525.0" prefHeight="205.0" prefWidth="206.0" stylesheets="@style.css" visible="false">
+         <children>
+            <Text fill="#f2eaea" layoutX="19.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egresos Submenu">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="99.0" layoutY="44.0" startX="-100.0" stroke="#f2eaea" strokeWidth="4.0" />
+            <Button fx:id="egresosVerButton" focusTraversable="false" layoutY="56.0" mnemonicParsing="false" onAction="#egresosSeePane" prefHeight="43.0" prefWidth="198.0" stylesheets="@style.css" text="Ver" />
+            <Button fx:id="egresosAddButton" layoutX="1.0" layoutY="113.0" mnemonicParsing="false" onAction="#egresosAddPane" prefHeight="43.0" prefWidth="198.0" text="Agregar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

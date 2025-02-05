@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="820.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="saleEditController">
+   <children>
+      <Text fill="WHITE" layoutX="200.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detalles de la Venta" wrappingWidth="362.1366882324219">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente:" wrappingWidth="114.93673706054688">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="clientText" fill="WHITE" layoutX="111.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Cliente" wrappingWidth="496.53668212890625">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="422.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="114.93673706054688">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="41.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sucursal:" wrappingWidth="114.93673706054688">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="382.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor:" wrappingWidth="132.5367431640625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="72.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lote:" wrappingWidth="114.93673706054688">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="365.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" wrappingWidth="114.93673706054688">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="fechaText" fill="WHITE" layoutX="515.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de la venta" wrappingWidth="218.93673706054688">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="sucursalText" fill="WHITE" layoutX="156.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sucursal de la venta" wrappingWidth="218.93673706054688">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="vendedorText" fill="WHITE" layoutX="522.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor de la Venta" wrappingWidth="258.9367370605469">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="loteText" fill="WHITE" layoutX="136.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lote de la venta" wrappingWidth="258.9367370605469">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalText" fill="WHITE" layoutX="448.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de la venta" wrappingWidth="258.9367370605469">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableview" layoutX="41.0" layoutY="191.0" prefHeight="288.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="productName" prefWidth="252.00000762939453" text="Producto" />
+          <TableColumn fx:id="unitPrice" prefWidth="287.9999694824219" text="Precio Unitario" />
+            <TableColumn fx:id="cantidad" prefWidth="87.199951171875" text="Cantidad" />
+            <TableColumn fx:id="total" prefWidth="139.20001220703125" text="Total" />
+        </columns>
+      </TableView>
+      <Button fx:id="dwButton" layoutX="72.0" layoutY="491.0" mnemonicParsing="false" onAction="#generateTXTFile" prefHeight="32.0" prefWidth="115.0" text="Descargar ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Button>
+      <Text fx:id="id" fill="WHITE" layoutX="553.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="227.73666381835938">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="dwText" fill="WHITE" layoutX="220.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="227.73666381835938">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font></Text>
+   </children>
+</Pane>

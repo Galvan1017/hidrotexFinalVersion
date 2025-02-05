@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="530.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delSummaryController">
+   <children>
+      <Text fx:id="mainText" layoutX="145.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El siguiente inventario regreso a Stock" wrappingWidth="550.9366760253906">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableview" layoutX="71.0" layoutY="86.0" prefHeight="384.0" prefWidth="651.0">
+         <columns>
+            <TableColumn fx:id="productVenta" prefWidth="339.1999740600586" text="Producto" />
+            <TableColumn fx:id="precioCVenta" prefWidth="306.4001159667969" text="Cantidad" />
+         </columns>
+      </TableView>
+      <Button layoutX="633.0" layoutY="481.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="125.0" text="Siguiente " />
+   </children>
+</AnchorPane>

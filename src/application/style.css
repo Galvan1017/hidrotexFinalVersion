@@ -1,0 +1,45 @@
+/* Styling for the VBox (Side Menu) */
+
+
+
+/* Button styling (common styles for all buttons in the side menu) */
+#clientesButton, #productoButton, #ventaButton, #egresosButton, #verButton{
+    -fx-background-color: #282828;
+    -fx-alignment: baseline-left;
+    -fx-pref-height: 127.0;
+    -fx-pref-width: 300.0;
+    -fx-padding: 0.0 0.0 0.0 40.0; /* Left padding for text alignment */
+    -fx-fill: #f2eaea;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 20.0;
+}
+
+#clientesVerBT,#clientesAgregarBT,#productoVerBT,#productoAgregarBT,#ventaVerButton,#ventaAddButton,#egresosVerButton,#egresosAddButton,#cotizarButton{
+	-fx-background-color: #282828;
+	-fx-text-fill: #f2eaea;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 20.0;
+    -fx-pref-height: 43.0;
+    -fx-pref-width: 198.0;
+	
+}
+
+#clientesButton:hover, #productoButton:hover,#ventaButton:hover,#egresosButton:hover,#verButton:hover,#clientesVerBT:hover,
+#clientesAgregarBT:hover,#productoVerBT:hover,#productoAgregarBT:hover,
+#ventaVerButton:hover,#ventaAddButton:hover,#egresosVerButton:hover,#egresosAddButton:hover,#cotizarButton:hover{
+	
+	-fx-background-color: #423f3f;
+	-fx-font-size: 24.0;
+	
+}
+#header {
+    -fx-background-color: #282828;
+}
+
+#sideMenu,#productSubmenu,#ventaSubmenu {
+    -fx-background-color: #282828;
+    
+}
+
+
+

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VentaAddController">
+   <children>
+      <Text layoutX="370.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nueva Venta " wrappingWidth="289.8701171875">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="132.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sucursal: ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="525.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="551.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lote:" wrappingWidth="62.979461669921875">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="sucursalField" layoutX="246.0" layoutY="93.0" prefHeight="25.0" prefWidth="191.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="loteField" layoutX="670.0" layoutY="94.0" prefHeight="25.0" prefWidth="190.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="vendedorField" layoutX="671.0" layoutY="60.0" prefHeight="25.0" prefWidth="172.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <Text layoutX="118.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente:" wrappingWidth="142.5">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="57.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Producto:" wrappingWidth="248.9000244140625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableview" layoutX="43.0" layoutY="188.0" prefHeight="384.0" prefWidth="907.0">
+        <columns>
+          <TableColumn fx:id="productVenta" prefWidth="268.2666893005371" text="Producto" />
+          <TableColumn fx:id="precioUVenta" prefWidth="220.800048828125" text="Precio Unitario " />
+            <TableColumn fx:id="precioCVenta" prefWidth="91.20001220703125" text="Cantidad" />
+            <TableColumn fx:id="totalVenta" prefWidth="171.199951171875" text="Total" />
+            <TableColumn fx:id="eliminarItem" prefWidth="150.39996337890625" text="Acciones" />
+        </columns>
+      </TableView>
+      <Text layoutX="366.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" wrappingWidth="142.5">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="646.0" layoutY="590.0" mnemonicParsing="false" onAction="#generarVenta" prefHeight="86.0" prefWidth="261.0" text="Generar Venta">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="607.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad:" wrappingWidth="129.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cantidadField" layoutX="728.0" layoutY="131.0" prefHeight="36.0" prefWidth="97.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <Button layoutX="835.0" layoutY="129.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="39.0" prefWidth="122.0" text="Agregar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="clientComboBox" layoutX="224.0" layoutY="43.0" prefHeight="25.0" prefWidth="236.0" />
+      <Text fx:id="clientErrMess" layoutX="246.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="142.5">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Text>
+      <ComboBox fx:id="productComboBox" layoutX="288.0" layoutY="136.0" prefHeight="25.0" prefWidth="310.0" />
+      <Text fx:id="productAddMess" layoutX="605.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="261.0000000000002" />
+      <Text fx:id="totalText" layoutX="437.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.0" wrappingWidth="142.5">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="finalText" layoutX="160.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.1000366210938">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="iva" layoutX="87.0" layoutY="604.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="190.0" text="Venta Con Iva">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></CheckBox>
+   </children>
+</Pane>

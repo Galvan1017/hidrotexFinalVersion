@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="980.0" style="-fx-border-color: #000000; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClienteAddController">
+   <children>
+      <Text layoutX="352.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Cliente" wrappingWidth="374.9367370605469">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="94.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Cliente:" wrappingWidth="258.9366455078125">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="clientNameField" layoutX="338.0" layoutY="172.0" prefHeight="45.0" prefWidth="362.0" style="-fx-border-color: #000000;">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <Text layoutX="94.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:" wrappingWidth="214.13665771484375">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="clientPhoneField" layoutX="337.0" layoutY="261.0" prefHeight="45.0" prefWidth="362.0" style="-fx-border-color: #000000;">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <Text layoutX="102.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo:" wrappingWidth="214.13665771484375">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="clientMailField" layoutX="336.0" layoutY="364.0" prefHeight="45.0" prefWidth="362.0" style="-fx-border-color: #000000;">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <Button fx:id="generateClient" layoutX="539.0" layoutY="523.0" mnemonicParsing="false" onAction="#saveClient" prefHeight="59.0" prefWidth="207.0" style="-fx-border-color: #000000;" text="Generar Cliente ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font></Button>
+      <Text fx:id="errorMess" layoutX="360.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="214.13665771484375">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="102.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RFC:" wrappingWidth="214.13665771484375">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="clientRFCField" layoutX="336.0" layoutY="440.0" prefHeight="45.0" prefWidth="362.0" style="-fx-border-color: #000000;">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+   </children>
+</Pane>
